@@ -21,6 +21,7 @@ const bodyParser = require('body-parser');
 const sessions = require('express-session');
 
 
+/*UI */
 
 
 
@@ -49,6 +50,17 @@ app.use(sessions({
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30 },
     resave: false,
 }));
+
+
+app.get("/", async(req,res)=>{
+    res.render("home.ejs", {
+        logged:true,
+    })
+})
+
+app.get("/granim", async(req,res)=>{
+
+})
 
 
 app.listen(port, ()=>{

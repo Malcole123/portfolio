@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/max/global.max.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/misc/thingy_accent.svg">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/granim/dist/granim.min.js"></script>
+    <script src="/js/index.js" defer type="module"></script>
+    <title>Malik | Full stack developer</title>
+</head>
+<body>
+    <div class="app_main app_dark">
+        <nav class="navbar_ light_nav">
+            <div class="container d-flex h-100 align-items-center justify-content-between" style="align-items:center">
+                <img src="/images/logos/malik_dark.svg" alt="Malik logo" class="main_logo">
+                <ul class="nav_links">
+                    <li class="navlink_menu_item"><a href="#" class="text-dark">Home</a></li>
+                    <li class="navlink_menu_item"><a href="#about_" class="text-dark">About</a></li>
+                    <li class="navlink_menu_item"><a href="#blog_" class="text-dark">Blog</a></li>
+                    <li class="navlink_menu_item"><a href="#about__" class="text-dark">Portfolio</a></li>
+                    <li><button class="dark-button-outline">
+                        <span class="" style="visibility:hidden">Contact Me</span>
+                        <span class="dark-button-txt">Contact</span>
+                        <div class="dark-button-filler"></div>
+                    </button></li>
+                </ul>
+                <div class="mobile_menu_right d-lg-none">
+                    <button class="dark-button-outline">
+                        <span class="" style="visibility:hidden">Contact Me</span>
+                        <span class="dark-button-txt">Contact</span>
+                        <div class="dark-button-filler"></div>
+                    </button>
+                    <div class="menu_icon">
+                        <svg width="50" height="50" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M107.143 0H92.857V63.253L69.162 4.60582L55.9165 9.95735L80.2255 70.124L34.3401 24.2385L24.2386 34.3401L68.2175 78.319L11.2241 53.418L5.5046 66.509L65.8105 92.857H0V107.143H65.8105L5.5046 133.491L11.2241 146.582L68.2175 121.681L24.2386 165.66L34.3401 175.761L80.2255 129.876L55.9165 190.043L69.162 195.394L92.857 136.747V200H107.143V136.747L130.838 195.394L144.083 190.043L119.775 129.876L165.66 175.761L175.761 165.66L131.782 121.681L188.776 146.582L194.495 133.491L134.19 107.143H200V92.857H134.189L194.495 66.509L188.776 53.418L131.782 78.319L175.761 34.34L165.66 24.2385L119.775 70.124L144.083 9.95735L130.838 4.60582L107.143 63.253V0Z" fill="#E94D35"/>
+                            </svg>         
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </nav>
+        <section class="header header_light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+                        <h1 class="heading_text text-dark">Hi, I'm Malik <span class="highlight">,</span> A Full-stack developer based in Jamaica <span class="highlight">.</span></h1>
+                        <div class="d-flex align-items-center mt-4">
+                            <button class="dark-accent-button" type="button">
+                                Download Resume
+                            </button>
+                            <button class="dark-button-outline">
+                                <span class="" style="visibility:hidden">Contact Me</span>
+                                <span class="dark-button-txt">Contact</span>
+                                <div class="dark-button-filler"></div>
+                            </button>
+                        </div>
+                        <div class="d-flex mt-4 gap-4">
+                            <a href="https://wa.link/9j0x1k" target="_blank">
+                                <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            </a>
+                            <a href="https://github.com/Malcole123" target="_blank" style="text-decoration:none">
+                                <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/malik-coleman-47259322b" target="_blank" style="text-decoration:none">
+                                <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 header_image" data-aos="flip-right"></div>
+                </div>
+            </div>
+
+        </section>
+        <section class="about_section about_light" id="about_">
+            <div class="about_section_body">
+                <div class="container">
+                    <div class="row h-100">
+                        <div class="col-lg-6 col-md-6 col-sm-12" data-aos="zoom-out-up">
+                            <h1 class="text-uppercase text-dark">Malik<br>Coleman<span class="highlight">.</span></h1>
+                            <p>I enjoy figuring out innovative ways to automate tasks, . My passion is backend development but I also love the challenge of crafting a refined user experience.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <button class="dark-accent-button" type="button">
+                                    Download Resume
+                                </button>
+                                <button class="dark-button-outline">
+                                    <span class="" style="visibility:hidden">Contact Me</span>
+                                    <span class="dark-button-txt">Contact</span>
+                                    <div class="dark-button-filler"></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 about_display">
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="skills">
+                                <div class="display_chip_head light_chip_head">
+                                    Skills
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+                            </div>
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="projects">
+                                <div class="display_chip_head light_chip_head">
+                                    Projects
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+                            </div>
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="experience">
+                                <div class="display_chip_head light_chip_head">
+                                    Experience
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+
+                            </div>
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="portfolio">
+                                <div class="display_chip_head light_chip_head">
+                                    Portfolio
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+                            </div>
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="certification">
+                                <div class="display_chip_head light_chip_head">
+                                    Education & Certifications
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+                            </div>
+                            <div class="display_chip display_chip_light"  data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-modal-control="services">
+                                <div class="display_chip_head light_chip_head">
+                                    Services
+                                </div>
+                                <div class="display_chip_filler light_chip_filler"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="articles_section" id="blog_">
+            <div class="container">
+            
+                <div class="row g-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12" style="padding:20px 35px;">
+                        <h2 class="text-black" data-aos="zoom-in">Articles</h2>
+                        <p class="text-dark fs-3" data-aos="fade-left">Check out my latest articles</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <button class="light-button-outline">
+                                <span class="" style="visibility:hidden">View</span>
+                                <span class="light-button-txt">View</span>
+                                <div class="light-button-filler"></div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row g-2">
+                            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up">
+                                <div class="app_card app_card_large">
+                                    <div class="w-100">
+                                        <h6 class="highlight">Title</h6>
+                                        <h3 class="fw-bold">Smokey Toast</h3>
+                                    </div>
+                                    <div class="w-100">
+                                        <h6 class="highlight">Description</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        <button class="dark-button-outline mt-2">
+                                            <span class="" style="visibility:hidden">Read..</span>
+                                            <span class="dark-button-txt">Read..</span>
+                                            <div class="dark-button-filler"></div>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up">
+                                <div class="app_card app_card_large">
+                                    <div class="w-100">
+                                        <h6 class="highlight">Title</h6>
+                                        <h3 class="fw-bold">Smokey Toast</h3>
+                                    </div>
+                                    <div class="w-100">
+                                        <h6 class="highlight">Description</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        <button class="dark-button-outline mt-2">
+                                            <span class="" style="visibility:hidden">Read..</span>
+                                            <span class="dark-button-txt">Read..</span>
+                                            <div class="dark-button-filler"></div>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up">
+                                <div class="app_card app_card_large">
+                                    <div class="w-100">
+                                        <h6 class="highlight">Title</h6>
+                                        <h3 class="fw-bold">Smokey Toast</h3>
+                                    </div>
+                                    <div class="w-100">
+                                        <h6 class="highlight">Description</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        <button class="dark-button-outline mt-2">
+                                            <span class="" style="visibility:hidden">Read..</span>
+                                            <span class="dark-button-txt">Read..</span>
+                                            <div class="dark-button-filler"></div>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-up">
+                                <div class="app_card app_card_large">
+                                    <div class="w-100">
+                                        <h6 class="highlight">Title</h6>
+                                        <h3 class="fw-bold">Smokey Toast</h3>
+                                    </div>
+                                    <div class="w-100">
+                                        <h6 class="highlight">Description</h6>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        <button class="dark-button-outline mt-2">
+                                            <span class="" style="visibility:hidden">Read..</span>
+                                            <span class="dark-button-txt">Read..</span>
+                                            <div class="dark-button-filler"></div>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <section class="contact_section bg-white" id="contact_">
+            <div class="contact_section_body bg-white" data-aos="fade-up" data-aos-duration="700">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-6 col-md-4 col-sm-12">
+                            <h2>Contact</h2>
+                            <div class="d-flex mt-4 gap-4">
+                                <a href="https://wa.link/9j0x1k" target="_blank">
+                                    <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                </a>
+                                <a href="https://github.com/Malcole123" target="_blank" style="text-decoration:none">
+                                    <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+                                </a>
+                                <a href="https://linkedin.com/in/malik-coleman-47259322b" target="_blank" style="text-decoration:none">
+                                    <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>                            </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                            <form class="w-100" id="contactForm_">
+                                <div class="w-100">
+                                    <label for="_id_Name">Name</label>
+                                    <input type="text" name="name_" id="_id_Name" class="form-control">
+                                </div>
+                                <div class="w-100 mt-2">
+                                    <label for="_id_Email">Email</label>
+                                    <input type="email" name="name_" id="_id_Email" class="form-control">
+                                </div>
+                                <div class="w-100 mt-2">
+                                    <label for="_id_Message">Your message</label>
+                                    <textarea type="text" name="name_" id="_id_Name" class="form-control" rows="5" style="resize:none;"></textarea>
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+                                    <button class="dark-button-outline w-100">
+                                        <span class="" style="visibility:hidden">Send</span>
+                                        <span class="dark-button-txt">Send</span>
+                                        <div class="dark-button-filler"></div>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer container bg-black">
+            <div class="row g-4 w-100">
+                <div class="col-lg-3">
+                    <img src="/images/logos/malik_light.svg" alt="Malik logo" class="main_logo" data-aos="zoom-in">
+                </div>
+                <div class="col-lg-9 d-flex justify-content-end align-items-center">
+                    <ul class="nav_links" style="position:static;background:black;">
+                        <li class="navlink_menu_item d-block" data-aos="fade-up"><a href="#" class="text-white">Home</a></li>
+                        <li class="navlink_menu_item d-block" data-aos="fade-up"><a href="#about_" class="text-white">About</a></li>
+                        <li class="navlink_menu_item d-block" data-aos="fade-up"><a href="#blog_" class="text-white">Blog</a></li>
+                        <li class="navlink_menu_item d-block" data-aos="fade-up"><a href="#about__" class="text-white">Portfolio</a></li>
+                        <li data-aos="fade-up">
+                            <div class="d-flex align-items-center">
+                                <button class="accent-button" type="button">
+                                    Download Resume
+                                </button>
+                                <button class="light-button-outline">
+                                    <span class="" style="visibility:hidden">Contact Me</span>
+                                    <span class="light-button-txt">Contact</span>
+                                    <div class="light-button-filler"></div>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="d-flex gap-4">
+                        <a href="https://wa.link/9j0x1k" target="_blank">
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        </a>
+                        <a href="https://github.com/Malcole123" target="_blank" style="text-decoration:none">
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/malik-coleman-47259322b" target="_blank" style="text-decoration:none">
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>       
+                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="app_modal">
+            <div class="app_modal_body" data-aos="zoom-in-down">
+                <div class="app_modal_body_head">
+                    <h4 id="modal_body_title">Skills</h4>
+                    <span id="closeAppModal" style="cursor:pointer">Close&nbsp;<button type="button" class="btn btn-close"></button></span>
+                </div>
+                <div class="app_modal_body_body d-none" id="skills_about_area">
+                    <div class="app_modal_body_inner w-100">
+                        <div class="container-fluid">
+                            <div class="row g-3 w-100">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">HTML</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">CSS</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Javascript</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Wordpress</h3>
+                                            <h2 class="text-black text-right fw-bold">2 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Web Design</h3>
+                                            <h2 class="text-black text-right fw-bold">2 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Javascript</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Vue.JS</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Node.JS</h3>
+                                            <h2 class="text-black text-right fw-bold">3 years</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card">
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h6 class="highlight">Skill</h6>
+                                            <h6 class="highlight text-right">Years of experience</h6>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-start">
+                                            <h3 class="fw-bold">Web-scraping</h3>
+                                            <h2 class="text-black text-right fw-bold">1 year</h2>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app_modal_body_body d-none" id="projects_about_area">
+
+                    <div class="app_modal_body_inner w-100">
+                        <div class="container-fluid">
+                            <div class="row g-3 w-100">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Intouch</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Type</h6>
+                                            <h6 class="fw-bold">Concept</h6>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>A job search platform with client HR dashboard</p>
+                                            <a class="dark-button-outline mt-2" href="https://intouchja.herokuapp.com/main/home" target="_blank">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Smokey Toast</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Type</h6>
+                                            <h6 class="fw-bold">Practice</h6>
+                                        </div>
+
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>A simple customizable toast notification library</p>
+                                            <a class="dark-button-outline mt-2" href="https://malcole123.github.io/smokeytoast/src/html/index.html" target="_blank">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Job Listing Filter</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Type</h6>
+                                            <h6 class="fw-bold">Practice</h6>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>List filtering from JSON information</p>
+                                            <a class="dark-button-outline mt-2" href="https://malcole123.github.io/joblistingsfilter/" target="_blank">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Tip Calculator</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Type</h6>
+                                            <h6 class="fw-bold">Practice</h6>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>A simple tip calculator</p>
+                                            <a class="dark-button-outline mt-2" href="https://malcole123.github.io/tip-calculator/" target="_blank">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Crowdfund</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Type</h6>
+                                            <h6 class="fw-bold">Practice</h6>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Challenge by frontend mentor</p>
+                                            <a class="dark-button-outline mt-2" href="https://malcole123.github.io/crowdfunding-frontend-mentor/" target="_blank">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Smokey Toast</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                            <button class="dark-button-outline mt-2">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Title</h6>
+                                            <h3 class="fw-bold">Smokey Toast</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, dolor eligendi eum minus molestias id?</p>
+                                            <button class="dark-button-outline mt-2">
+                                                <span class="" style="visibility:hidden">View</span>
+                                                <span class="dark-button-txt">View</span>
+                                                <div class="dark-button-filler"></div>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>               
+                 </div>
+                 <div class="app_modal_body_body d-none" id="experience_about_area">
+
+                    <div class="app_modal_body_inner w-100">
+                        <div class="container-fluid">
+                            <div class="row g-3 w-100">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_extra_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Job Title</h6>
+                                            <h3 class="fw-bold">Full-stack Developer</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Company</h6>
+                                            <h3 class="fw-bold">Digita Global Marketing</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Build, customize and manage e-commerce web solutions as well as website and hosting security</p>
+                                        </div>
+                        
+                                        <div class="w-100">
+                                            <h6 class="highlight">Start - End</h6>
+                                            <p>Apr. 2022 - Jun. 2022</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_extra_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Job Title</h6>
+                                            <h3 class="fw-bold">Freelance</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Company</h6>
+                                            <h3 class="fw-bold">Upwork</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Build MVPs, API design, Wordpress migration, No code app development</p>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Start - End</h6>
+                                            <p>Oct. 2020 - Present</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="app_card app_card_extra_large">
+                                        <div class="w-100">
+                                            <h6 class="highlight">Job Title</h6>
+                                            <h3 class="fw-bold">Technical Support Representative</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Company</h6>
+                                            <h3 class="fw-bold">Sutherland Global Services</h3>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Description</h6>
+                                            <p>Provide technical support for Amazon prime services and fire devices</p>
+                                        </div>
+                                        <div class="w-100">
+                                            <h6 class="highlight">Start - End</h6>
+                                            <p>Nov. 2020 - Mar. 2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+                    </div>               
+                 </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
