@@ -9,17 +9,20 @@
 }
 html{
     overflow-x:hidden;
+    width:100%;
 }
 
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:var(--body-font)
+    font-family:var(--body-font);
+    
 }
 
 body{
     background:#333;
+    overflow-x:hidden;
 }
 
 /*GENERAL CSS*/
@@ -345,7 +348,7 @@ body{
 
 }
 .app_card_large{
-    height:27vh;
+    height:32vh;
 }
 .app_card_extra_large{
     height:35vh;
@@ -567,6 +570,7 @@ body{
         background-position:center;
         background-attachment:scroll;
         position:relative;
+        height:fit-content;
     }
     .about_section_body h1{
         font-size:4em;
@@ -616,8 +620,9 @@ body{
     .display_chip{
         height:10vh;
     }
-    .about_section{
+    .about_section, .articles_section{
         min-height:110vh;
+        height:fit-content
     }
     .app_modal_body{
         width:95%;
@@ -643,6 +648,9 @@ body{
         width:98%;
         height:98%;
         background:white;
+    }
+    .contact_section{
+        min-height:80vh;
     }
     
     .desktop_only{
