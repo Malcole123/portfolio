@@ -19,6 +19,30 @@ const compression = require('compression');
 const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
 const sessions = require('express-session');
+const fs = require("fs");
+
+const contactForm = require("./form_data/contact_form.json");
+const porftfolio = require("./portfolio.json")
+const contactFormUpdate = (add_, time)=>{
+    add_.sentDate = time;
+    let curr_arr = contactForm;
+    curr_arr.push(add_);
+    let write_data = JSON.stringify(curr_arr);
+    let return_dt = {
+        completed:true,
+    }
+    let create =fs.writeFile('./form_data/contact_form.json', write_data, (err)=>{
+        if(err){
+            return_dt =  {
+                completed:false,
+            }            
+        }else{
+            
+        }
+    })
+    return return_dt
+}
+
 
 
 /*UI */
@@ -54,13 +78,27 @@ app.use(sessions({
 
 app.get("/", async(req,res)=>{
     res.render("home.ejs", {
-        logged:true,
+        data:porftfolio,
     })
 })
 
-app.get("/granim", async(req,res)=>{
-
+app.get("/articles", async(req,res)=>{
+    res.render("articles.ejs", {
+        data:porftfolio,
+    })
 })
+
+app.post("/contact/collect", async(req,res)=>{
+    let body_ = req.body;
+    let sentDate = new Date().getTime();
+    let update_ = contactFormUpdate(body_, sentDate);
+    res.send({
+        completed:update_.completed
+    })
+})
+ app.get("/admin", (req,res)=>{
+
+ })
 
 
 app.listen(port, ()=>{

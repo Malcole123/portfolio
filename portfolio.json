@@ -1,0 +1,92 @@
+{
+    "name":{
+        "first":"Malik",
+        "Last":"Coleman"
+    },
+    "social_links":{
+        "whatsapp":"",
+        "github":"",
+        "linkedin":""
+    },
+    "skills":[
+        {
+            "name":"HTML",
+            "y_o_e":"3 years",
+            "description":""
+        }
+    ],
+    "projects":[
+        {
+            "name":"Intouch",
+            "short_description":"A job search platform with a client HR dashboard.",
+            "mainImage":"/images/projects/Intouch_desktop_display.jpg",
+            "link":"https://intouchja.herokuapp.com/main/home",
+            "start_date":0,
+            "end_date":0
+        },
+        {
+            "name":"Smokey Toast",
+            "short_description":"A lightweight toast notification",
+            "mainImage":"/images/projects/smokey_desktop_display.jpg",
+            "link":"https://malcole123.github.io/smokeytoast/src/html/index.html",
+            "start_date":0,
+            "end_date":0
+        },
+        {
+            "name":"Job Filter",
+            "short_description":"List filtering from JSON information",
+            "mainImage":"/images/projects/job_json_desktop_display.jpg",
+            "link":"https://malcole123.github.io/joblistingsfilter/",
+            "start_date":0,
+            "end_date":0
+        },
+        {
+            "name":"Tip Calculator",
+            "short_description":"A simple tip calculator",
+            "mainImage":"/images/projects/tip_calc_desktop_display.jpg",
+            "link":"https://malcole123.github.io/joblistingsfilter/",
+            "start_date":0,
+            "end_date":0
+        }
+        
+    ],
+    "experience":[
+        {
+            "title":"",
+            "company":"",
+            "description":"",
+            "start_date":0,
+            "end_date":0
+        }
+    ],
+    "portfolio":[
+
+    ],
+    "education":[
+        {
+            "school":"",
+            "certification":"",
+            "start_date":0,
+            "end_date":0
+        }
+    ],
+    "articles":[
+        {
+            "title":"node.js - fs module",
+            "description":"",
+            "short_description":"A short analysis of node fs module.",
+            "estimated_read":"",
+            "html":"",
+            "link":""
+        },
+        {
+            "title":"User Authentication",
+            "description":"",
+            "short_description":"User authentication and session management in node using express.",
+            "estimated_read":"10",
+            "html":"",
+            "link":""
+        }
+    ]
+
+}

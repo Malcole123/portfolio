@@ -39,7 +39,154 @@ close.addEventListener('click', ()=>{
 })
 
 const menuBtn = document.querySelector(".menu_icon");
+const navLinks = document.querySelectorAll('.navlink_menu_item');
+let navLink = document.querySelector(".nav_links");
+
+navLinks.forEach((link,index)=>{
+    link.addEventListener('click', ()=>{
+        if(window.innerWidth <= 1086){
+            setTimeout(()=>{
+                navLink.classList.remove("show_nav_links")
+            },300)
+        }
+    })
+})
+
+
 menuBtn.addEventListener('click', ()=>{
-    const navLink = document.querySelector(".nav_links");
     navLink.classList.toggle("show_nav_links")
+})
+
+class Cannon {
+    constructor(fixedPoint, rotate, cannon, cannonBall){
+        //Document
+        this.docDimensions = {
+            height:0,
+            width:0,
+        }
+
+        //Cannon
+        this.fixedPoint_id = fixedPoint
+        this.rotatePoint_id = rotate
+        this.mousePosition = {
+            x:0,
+            y:0,
+        },
+        this.fixedPoint = null;
+        this.rotatePoint = null;
+        this.cannon = document.getElementById(cannon);
+        this.rotateAngle = 0
+        //Cannon ball
+        this.ball = document.getElementById(cannonBall);
+        this.ballPosition = {
+            x:0,
+            y:0,
+        }
+    }
+    setMousePosition(event){
+        this.mousePosition.x  = event.clientX;
+        this.mousePosition.y = event.clientY;
+    }
+
+    setElements(){
+        this.fixedPoint = document.getElementById(this.fixedPoint_id);
+        this.rotatePoint = document.getElementById(this.rotatePoint_id); 
+        this.findBallPosition();
+    }
+    findBallPosition(){
+        let start_position = this.ball.getBoundingClientRect();
+        let body_ = document.querySelector("body");
+        let body_rect = body_.getBoundingClientRect();
+        this.docDimensions.height = body_rect.height;
+        this.docDimensions.width = body_rect.right;
+        //Find  Y position using distance from bottom 
+        this.ballPosition.y = start_position.top-  body_rect.top
+        this.ballPosition.x = start_position.x;
+    }
+    changeBallPosition(x,y){
+        this.ball.style.top = `${y}px`;
+        this.ball.style.left = `${x}px`;
+        this.ball.style.background = "#f44336"
+    }
+
+    rotate(){
+        this.rotatePoint.style.transform = `rotate(${this.rotateAngle}deg)`
+    }
+    
+
+}
+
+const cannon = new Cannon("fixed_point", "rotate_cannon", "cannon_", "cannonBall");
+
+cannon.setElements()
+cannon.rotate()
+
+window.addEventListener('mousemove', (event)=>{
+    cannon.setMousePosition(event)
+})
+
+let formProg_ = document.getElementById("formLoader");
+const submitForm = async(event)=>{
+    formProg_.classList.remove("d-none")
+    let form = event.currentTarget;
+    let val_arr = ['Name', 'Email', 'Message'];
+    let input_arr = [];
+    val_arr.forEach((val_, index)=>{
+        let el_ = document.getElementById(`_id_${val_}`);
+        if(el_ !== null && el_ !== undefined){
+            input_arr.push(el_.value)
+        }
+    })
+    const removeSpinner = ()=>{
+        setTimeout(()=>{
+            formProg_.classList.add("d-none")
+        },1200)
+    }
+
+    const completeAction = ()=>{
+        removeSpinner();
+        form.classList.add("d-none")
+        showFinalArea('success');
+        
+    }
+
+    const failureAction = ()=>{
+        removeSpinner();
+        form.classList.add("d-none")
+        showFinalArea('error')
+
+    }
+    const showFinalArea = (where_)=>{
+        let area = document.getElementById(`${where_}SentArea`);
+        area.classList.replace("d-none", "d-block")
+    }
+
+
+    await fetch("/contact/collect", {
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            name:input_arr[0],
+            email:input_arr[1],
+            message:input_arr[2],
+        })
+    }).then(res=>res.json()).then(data=>{
+        if(data.completed){
+            completeAction()
+        }else{
+            failureAction()
+        }
+    }).catch(error=>{
+        failureAction()
+    })
+
+}
+
+let form = document.getElementById("contactForm_");
+
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    submitForm(event)
 })

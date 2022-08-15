@@ -218,12 +218,41 @@ body{
     z-index:0;
     transition:0.4s ease-in-out
 }
-.display_chip:hover{
-    border:2px solid white;
-}
+
+
 
 .display_chip:hover .display_chip_filler{
     width:100%;
+}
+.display_chip:hover{
+    border:2px solid white;
+    color:var(--main-accent)!important;
+}
+
+.thingy_accent{
+    fill:var(--main-accent);
+}
+.thingy_white{
+    fill:white;
+}
+
+.display_chip .thingy{
+    fill:var(--main-accent)
+}
+.display_chip:hover  .thingy{
+    fill:white;
+}
+.display_chip:hover .thingy_parent{
+    animation:rotateThingy 300ms linear infinite;
+}
+
+@keyframes rotateThingy{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
 }
 
 .app_modal{
@@ -501,7 +530,18 @@ body{
 
 /*DARK THEME END*/
 
+#rotate_cannon{
+    transform-origin: center;
+}
 
+.app_card_image{
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:transparent;
+    height:100%;
+    
+}
 
 @media(max-width:1128px) {
     .navbar_{
@@ -597,7 +637,7 @@ body{
 
     .contact_section_body{
         width:100%;
-        height:95%;
+        height:100%;
         box-shadow: rgba(156, 156, 156, 0.24) 0px 3px 8px;
         padding:4% 2%;
     }
@@ -629,6 +669,13 @@ body{
         height:95%;
         background:white;
     }
+    .app_card_image{
+        height:30vh;
+    }
+    .app_card_fit{
+        height:fit-content;
+        padding-bottom:2em;
+    }
 
 }
 
@@ -650,7 +697,7 @@ body{
         background:white;
     }
     .contact_section{
-        min-height:80vh;
+        min-height:100vh;
     }
     
     .desktop_only{
