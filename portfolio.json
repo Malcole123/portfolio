@@ -20,7 +20,7 @@
             "name":"Intouch",
             "short_description":"A job search platform with a client HR dashboard.",
             "mainImage":"/images/projects/Intouch_desktop_display.jpg",
-            "link":"https://intouchja.herokuapp.com/main/home",
+            "link":"https://intouchja.herokuapp.com/main/search",
             "start_date":0,
             "end_date":0
         },

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            position:relative;
+            height:100vh;
+            width:100;
+            left:0px;
+        }
+        .ball{
+            height:30px;
+            width:30px;
+            background:black;
+            border-radius:50%;
+            animation:moveBall 1.4s linear forwards;
+        }
+        @keyframes  moveBall {
+            0%{
+                left:auto;
+            }
+            100%{
+                transform:translateX(711px);
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>

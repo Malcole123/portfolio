@@ -2,12 +2,18 @@ if(process.env.NODE_ENV !== "production"){
     require('dotenv').config()
 }
 
-const port = process.env.PORT
+const sessionKEY = process.env.SESSION_KEY;
+
+
+
+const port = process.env.PORT;
 const path = require("path");
-
-const express = require('express')
-
-const sessionKEY = process.env.SESSION_KEY
+const express = require('express');
+const compression = require('compression');
+const cookieParser = require("cookie-parser");
+const bodyParser = require('body-parser');
+const sessions = require('express-session');
+const fs = require("fs");
 
 
 
@@ -15,14 +21,12 @@ const app = express();
 //const server = http.createServer(app)
 //const io = socketio(server)
 
-const compression = require('compression');
-const cookieParser = require("cookie-parser");
-const bodyParser = require('body-parser');
-const sessions = require('express-session');
-const fs = require("fs");
 
 const contactForm = require("./form_data/contact_form.json");
-const porftfolio = require("./portfolio.json")
+const porftfolio = require("./portfolio.json");
+
+
+
 const contactFormUpdate = (add_, time)=>{
     add_.sentDate = time;
     let curr_arr = contactForm;
@@ -31,13 +35,9 @@ const contactFormUpdate = (add_, time)=>{
     let return_dt = {
         completed:true,
     }
-    let create =fs.writeFile('./form_data/contact_form.json', write_data, (err)=>{
+    fs.writeFile('./form_data/contact_form.json', write_data, (err)=>{
         if(err){
-            return_dt =  {
-                completed:false,
-            }            
-        }else{
-            
+            return_dt.completed = false           
         }
     })
     return return_dt
@@ -45,7 +45,6 @@ const contactFormUpdate = (add_, time)=>{
 
 
 
-/*UI */
 
 
 
@@ -96,9 +95,18 @@ app.post("/contact/collect", async(req,res)=>{
         completed:update_.completed
     })
 })
- app.get("/admin", (req,res)=>{
 
- })
+
+const adminPath = process.env.ADMIN_PATH;
+const adminLoginPath = process.env.ADMIN_LOGINPATH;
+
+app.get(adminPath, (req,res)=>{
+
+})
+
+
+
+
 
 
 app.listen(port, ()=>{

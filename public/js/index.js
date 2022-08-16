@@ -1,3 +1,4 @@
+
 AOS.init();
 
 
@@ -92,6 +93,7 @@ class Cannon {
         this.fixedPoint = document.getElementById(this.fixedPoint_id);
         this.rotatePoint = document.getElementById(this.rotatePoint_id); 
         this.findBallPosition();
+        console.log(this.ballPosition)
     }
     findBallPosition(){
         let start_position = this.ball.getBoundingClientRect();
@@ -104,8 +106,11 @@ class Cannon {
         this.ballPosition.x = start_position.x;
     }
     changeBallPosition(x,y){
+        this.ball.style.position = "fixed";
+        this.ball.style.zIndex = "99"
         this.ball.style.top = `${y}px`;
         this.ball.style.left = `${x}px`;
+        //Moving ball absolute in con
         this.ball.style.background = "#f44336"
     }
 
@@ -118,12 +123,6 @@ class Cannon {
 
 const cannon = new Cannon("fixed_point", "rotate_cannon", "cannon_", "cannonBall");
 
-cannon.setElements()
-cannon.rotate()
-
-window.addEventListener('mousemove', (event)=>{
-    cannon.setMousePosition(event)
-})
 
 let formProg_ = document.getElementById("formLoader");
 const submitForm = async(event)=>{
@@ -131,37 +130,24 @@ const submitForm = async(event)=>{
     let form = event.currentTarget;
     let val_arr = ['Name', 'Email', 'Message'];
     let input_arr = [];
+    //least efficient way, Done to show for each loops in project portfolio
     val_arr.forEach((val_, index)=>{
         let el_ = document.getElementById(`_id_${val_}`);
         if(el_ !== null && el_ !== undefined){
             input_arr.push(el_.value)
         }
     })
-    const removeSpinner = ()=>{
-        setTimeout(()=>{
-            formProg_.classList.add("d-none")
-        },1200)
-    }
 
-    const completeAction = ()=>{
-        removeSpinner();
-        form.classList.add("d-none")
-        showFinalArea('success');
-        
-    }
-
-    const failureAction = ()=>{
-        removeSpinner();
-        form.classList.add("d-none")
-        showFinalArea('error')
-
-    }
     const showFinalArea = (where_)=>{
         let area = document.getElementById(`${where_}SentArea`);
         area.classList.replace("d-none", "d-block")
     }
-
-
+    const removeSpinner = (final_state)=>{
+        setTimeout(()=>{
+            formProg_.classList.add("d-none");
+            showFinalArea(final_state);
+        },1200)
+    }
     await fetch("/contact/collect", {
         method:"POST",
         headers:{
@@ -173,13 +159,14 @@ const submitForm = async(event)=>{
             message:input_arr[2],
         })
     }).then(res=>res.json()).then(data=>{
+        form.classList.add("d-none")
         if(data.completed){
-            completeAction()
+            removeSpinner('success');
         }else{
-            failureAction()
+            removeSpinner('error');
         }
     }).catch(error=>{
-        failureAction()
+        removeSpinner('error');
     })
 
 }
@@ -190,3 +177,5 @@ form.addEventListener('submit', (event)=>{
     event.preventDefault();
     submitForm(event)
 })
+
+
