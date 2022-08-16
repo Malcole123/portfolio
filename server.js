@@ -101,9 +101,15 @@ const adminPath = process.env.ADMIN_PATH;
 const adminLoginPath = process.env.ADMIN_LOGINPATH;
 
 app.get(adminPath, (req,res)=>{
-
+    res.render('admin.ejs', {
+        data:contactForm
+    })
 })
 
+
+app.get('/download_resume', (req,res)=>{
+    res.download('Malik-Resume_updated_1660648194620.pdf')
+})
 
 
 
