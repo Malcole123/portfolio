@@ -92,7 +92,7 @@ body{
 }
 
 .heading_text{
-    font-size:4rem;
+    font-size:3rem;
     font-family:var(--head-font);
     text-transform:uppercase;
     animation:showHeading 800ms linear forwards;
@@ -140,7 +140,7 @@ body{
 .about_section{
     height:90vh;
     width:100%;
-    background-image:linear-gradient(rgb(255,255,255,1), rgb(255,255,255,0.5)) ,url('/images/backgrounds/about.png');
+    background:#fff;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -157,8 +157,8 @@ body{
     height:100%;
 }
 
-.about_section_body h1{
-    font-size:6em;
+.about_section_body h2{
+    font-size:3em;
 }
 .about_section_body p{
     font-size:1.5em;
@@ -168,7 +168,7 @@ body{
     right:0;
     top:0;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
     padding:50px 20px;
 }
@@ -213,7 +213,6 @@ body{
     bottom:0;
     left:0;
     width:0%;
-    border:2px solid white;
     background:var(--main-accent);
     z-index:0;
     transition:0.4s ease-in-out
@@ -318,6 +317,12 @@ body{
     font-family:var(--head-font);
     text-transform:uppercase;
 }
+.portfolio_section{
+    min-height:100vh;
+    width:100%;
+    background:var(--main-accent);
+    padding:100px 0px
+}
 .footer{
     min-height:20vh;
     width:100%;
@@ -351,8 +356,8 @@ body{
     align-items:center;
     height:10%;
 }
-.app_modal_body_head h4{
-    font-size:2em;
+.app_modal_body_head h5{
+    font-size:1.6em;
     font-weight:700;
     text-transform:uppercase;
     font-family:var(--head-font);
@@ -369,7 +374,7 @@ body{
 }
 
 .app_card{
-    height:20vh;
+    height:12vh;
     background:#fff;
     width:100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -382,8 +387,14 @@ body{
 .app_card_extra_large{
     height:35vh;
 }
-.app_card h3, .app_card h2, .app_card h6{
+.app_card h3, .app_card h2, .app_card h6, .app_card h4{
     font-family:var(--head-font);
+}
+.app_card h6{
+    font-size:0.8em;
+}
+.app_card h4{
+    font-size:1.6em;
 }
 /*GENERAL CSS END*/
 
@@ -518,7 +529,8 @@ body{
     padding:10px 24px;
     color:#fff;
     font-size:1.05rem;
-    height:fit-content
+    height:fit-content;
+    text-decoration:none;
 }
 
 .dark-accent-button:hover{
@@ -542,6 +554,7 @@ body{
     height:100%;
     
 }
+
 
 @media(max-width:1128px) {
     .navbar_{
@@ -602,10 +615,10 @@ body{
         background-image:none;
     }
     .heading_text{
-        font-size:3rem;
+        font-size:2.5rem;
     }
     .about_section{
-        background-image:url('/images/backgrounds/about.png');
+        background:#fff;
         background-size:cover;
         background-position:center;
         background-attachment:scroll;
@@ -613,7 +626,7 @@ body{
         height:fit-content;
     }
     .about_section_body h1{
-        font-size:4em;
+        font-size:3em;
     }
     .about_display{
         grid-template-columns:repeat(2,1fr);
@@ -676,6 +689,12 @@ body{
         height:fit-content;
         padding-bottom:2em;
     }
+    .portfolio_section{
+        height:fit-content;
+        width:100%;
+        background:var(--main-accent);
+        padding:100px 0px
+    }
 
 }
 
@@ -686,7 +705,6 @@ body{
     }
     .about_display{
         position:static;
-        grid-template-columns:repeat(2,1fr);
     }
     .display_chip{
         height:15vh;
