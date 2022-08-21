@@ -177,7 +177,8 @@ body{
     width:100%;
     height:15vh;
     position:relative;
-    transition:0.4s ease-in-out
+    transition:0.4s ease-in-out;
+    cursor: pointer;
 }
 .display_chip > *{
     padding:1em 0.25em;
@@ -320,7 +321,9 @@ body{
 .portfolio_section{
     min-height:100vh;
     width:100%;
-    background:var(--main-accent);
+    background:white url('/images/backgrounds/cool-background.png');
+    background-size:cover;
+    background-position:top 10% right 0%;
     padding:100px 0px
 }
 .footer{
@@ -379,7 +382,11 @@ body{
     width:100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding:8px 12px;
+    cursor:pointer;
 
+}
+.app_card_fit{
+    height:fit-content
 }
 .app_card_large{
     height:32vh;
@@ -396,6 +403,7 @@ body{
 .app_card h4{
     font-size:1.6em;
 }
+
 /*GENERAL CSS END*/
 
 
@@ -409,11 +417,17 @@ body{
 }
 
 /*Light buttons*/
+.light-button{
+    background:#fff;
+    border:2px solid white;
+    color:black;
+    padding:10px 24px;
+    outline:none;
+    font-size:1.02rem;
+}
 .light-button-outline{
     border:2px solid white;
-    outline:none;
     background:black;
-    padding:10px 24px;
     color:#fff;
     font-size:1.05rem;
     position:relative;
@@ -692,7 +706,6 @@ body{
     .portfolio_section{
         height:fit-content;
         width:100%;
-        background:var(--main-accent);
         padding:100px 0px
     }
 
