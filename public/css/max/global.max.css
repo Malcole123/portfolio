@@ -108,7 +108,7 @@ body{
 }
 
 .header_image{
-    background-image:url("/images/misc/showcase-desktop.png");
+    background-image:url('/images/misc/showcase-desktop.png');
     background-size:cover;
     background-position:bottom 0% left 0%;
     background-repeat:no-repeat;
@@ -321,7 +321,7 @@ body{
 .portfolio_section{
     min-height:100vh;
     width:100%;
-    background:white url('/images/backgrounds/cool-background.png');
+    background:black;
     background-size:cover;
     background-position:top 10% right 0%;
     padding:100px 0px
